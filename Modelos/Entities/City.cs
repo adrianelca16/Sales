@@ -7,17 +7,16 @@ using System.Threading.Tasks;
 
 namespace Modelos.Entities
 {
-    public class Country
+    public class City
     {
         public int Id { get; set; }
 
-        [Display(Name = "Pais")]
-        [MaxLength(100, ErrorMessage = "El campo {0} no puede tener mas de {1} carateres")]
+        [Display(Name = "Ciudad")]
+        [MaxLength(100, ErrorMessage = "El campo {0} debe tener máximo {1} caractéres.")]
         [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string Name { get; set; } = null!;
 
-        public ICollection<State>? States { get; set;}
+        public State? State { get; set; }
 
-        public int StateNumber =>  States == null ? 0 : States.Count;
     }
 }
