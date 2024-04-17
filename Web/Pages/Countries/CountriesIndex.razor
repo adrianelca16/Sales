@@ -18,18 +18,24 @@
                 <tr>
                     <th></th>
                     <th>País</th>
+                    <th>Estados</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var country in Countries!)
                 {
                     <tr>
-                        <td>
-                            <a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
-                            <button class="btn btn-danger" @onclick=@(() => DeleteAsync(country.Id))>Borrar</button>
-                        </td>
+                        
                         <td>
                             @country.Name
+                        </td>
+                        <td>
+                            @country.StateNumber
+                        </td>
+                        <td>
+                            <a class="btn btn-info" href="/countries/details/@country.Id">Detalles</a>
+                            <a class="btn btn-warning" href="/countries/edit/@country.Id">Editar</a>
+                            <button class="btn btn-danger" @onclick=@(() => DeleteAsync(country.Id))>Borrar</button>
                         </td>
                     </tr>
                 }
