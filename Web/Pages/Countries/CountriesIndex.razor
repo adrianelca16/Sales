@@ -1,7 +1,9 @@
 ﻿@page "/countries"
+
 @inject NavigationManager navigationManager;
 @inject SweetAlertService sweetAlertService;
 @inject IRepository repository;
+@attribute [Authorize(Roles = "Admin")]
 
 
 <h3>Paises</h3>

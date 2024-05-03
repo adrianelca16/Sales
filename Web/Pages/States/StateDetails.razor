@@ -2,7 +2,7 @@
 @inject SweetAlertService sweetAlertService
 @inject NavigationManager navigationManager
 @page "/states/details/{StateId:int}"
-
+@attribute [Authorize(Roles = "Admin")]
 @if (state is null)
 {
     <p>Cargando ...</p>
