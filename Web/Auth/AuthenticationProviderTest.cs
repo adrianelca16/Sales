@@ -13,7 +13,7 @@ namespace Web.Auth
             {
                 new Claim("FirstName", "Adrian"),
                 new Claim("LastName", "Adrian"),
-                new Claim(ClaimTypes.Name, "adrian@yopmail.com"),
+                new Claim(ClaimTypes.Name, "adrian2@yopmail.com"),
                 new Claim(ClaimTypes.Role, "Admin")
             },
             authenticationType: "test");
