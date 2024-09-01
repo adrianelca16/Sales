@@ -2,7 +2,7 @@
 @inject NavigationManager navigationManager
 @inject SweetAlertService sweetAlertService
 @page "/cities/edit/{CityId:int}"
-
+@attribute [Authorize(Roles = "Admin")]
 <h3>Editar Estado</h3>
 
 @if (city is null)
